@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Arvee D. Odon</title>
+    <link rel="shortcut icon" type="images" href="images/an.png">
+    <link rel="stylesheet" href="css/style.css">
+    <script type="text/javascript" src="js/scripts.js"></script>
+    <script src="https://kit.fontawesome.com/741560515d.js" crossorigin="anonymous"></script>
+</head>
+<body onLoad="renderTime();">
+<div id="header">
+    <div class="container">
+        <nav>
+            <img src="images/logo.png" class="logo">
+            <ul id="sidemenu">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="about.html">About</a></li>
+                <li><a href="gallery.html">Gallery</a></li>
+                <li><a href="contact.html">Contact</a></li>
+                <i class="fa-solid fa-circle-xmark" onclick="closemenu()"></i>
+            </ul>
+            <i class="fa-solid fa-bars" onclick="openmenu()"></i>
+        </nav>
+        <div id="clockDisplay"></div>
+        
+    </div>
+</div>
+
+<!----------contact------->
+<div id="contact">
+    <div class="container">
+        <div class="row">
+            <div class="contact-left">
+                <h1 class="sub-title">Contact Me</h1>
+                <p><i class="fa-solid fa-location-dot"></i>Biñan, Laguna</p>
+                <p><i class="fa-solid fa-envelope"></i>arveedurate220@gmail.com</p>
+                <p><i class="fa-solid fa-phone"></i>0951 487 2197</p>
+                <div class="social-icons">
+                    <a href="https://www.facebook.com/ArveeReed"><i class="fa-brands fa-facebook"></i></a>
+                    <a href="https://m.me/ArveeReed"><i class="fa-brands fa-facebook-messenger"></i></a>
+                </div>
+                <a href="#" download class="btn btn2">Download Information</a>
+            </div>
+            <div class="contact-right">
+                <form name="submit-to-google-sheet">
+                    <input type="text" name="Name" Placeholder="Your Name/Institution" required>
+                    <input type="email" name="Email" Placeholder="Your Email" required>
+                    <textarea name="Message" rows="6" Placeholder="Your Message"></textarea>
+                    <button type="submit" class="btn btn2">Submit</button>
+                </form>
+            </div>
+
+        </div>
+    </div>
+    <div class="copyright">
+        <p>Copyright © Arvee Durante Odon</p>
+    </div>
+</div>
+
+<script>
+    var sidemenu = document.getElementById("sidemenu");
+    function openmenu(){
+        sidemenu.style.right = "0";
+    }
+    function closemenu(){
+        sidemenu.style.right = "-200px";
+    }
+</script>
+<script>
+    const scriptURL = 'https://script.google.com/macros/s/AKfycbzNPUYJsQG8_-EvTkhafNDmTznlcytqsPaXuhsRSqR8oQsl4-cRmyzhihveWQqspYQgrA/exec'
+    const form = document.forms['submit-to-google-sheet']
+    const msg = document.getElementById("msg")
+  
+    form.addEventListener('submit', e => {
+      e.preventDefault()
+      fetch(scriptURL, { method: 'POST', body: new FormData(form)})
+        .then(response => {
+            msg.innerHTML = "Your message has been sent!"
+            setTimeout(function(){
+                msg.innerHTML = ""
+            },5000)
+            form.reset()
+        })
+        .catch(error => console.error('Error!', error.message))
+    })
+  </script>
+</body>
+</html>

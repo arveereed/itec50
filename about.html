@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Arvee D. Odon</title>
+    <link rel="shortcut icon" type="images" href="images/an.png">
+    <link rel="stylesheet" href="css/style.css">
+    <script type="text/javascript" src="js/scripts.js"></script>
+    <script src="https://kit.fontawesome.com/741560515d.js" crossorigin="anonymous"></script>
+</head>
+<body onLoad="renderTime();">
+<div id="header">
+    <div class="container">
+        <nav>
+            <img src="images/logo.png" class="logo">
+            <ul id="sidemenu">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="about.html">About</a></li>
+                <li><a href="gallery.html">Gallery</a></li>
+                <li><a href="contact.html">Contact</a></li>
+                <i class="fa-solid fa-circle-xmark" onclick="closemenu()"></i>
+            </ul>
+            <i class="fa-solid fa-bars" onclick="openmenu()"></i>
+        </nav>
+        <div id="clockDisplay"></div>
+                
+    </div>
+</div>
+<!-----about---->
+<div id="about">
+    <div class="container">
+        <div class="row">
+            <div class="about-col-1">
+                <img src="images/user.jpg">
+            </div>
+            <div class="about-col-2">
+                <h1 class="sub-title">About Me</h1>
+                <p>
+                    I am a Java programmer residing in Laguna. I am pursuing my studies at Cavite State University in Carmona, Cavite. My ultimate career goal is to become a Software Engineer. I am drawn to this field because I thoroughly enjoy solving real-life problems through programming, although I find math problems less engaging. I constantly seek to challenge myself by diving into new subjects from the ground up.<br><br>
+                </p>
+                <p>
+                    In my free time, I indulge in various hobbies. I particularly enjoy watching American movies, anime series, and educational videos. These activities not only provide me with entertainment but also serve as a means to further my learning.<br><br>
+                </p>
+                <div class="tab-titles">
+                    <p class="tab-links active-link" onclick="opentab('skills')"><b>Skills</b></p>
+                    <p class="tab-links" onclick="opentab('education')"><b>Education</b></p>
+                </div>
+                <div class="tab-contents active-tab" id="skills">
+                    <ul style="list-style:square">
+                        <li>•	Computer Literate</li>
+                        <li>•	Good sense of leadership</li>
+                        <li>•	Good in problem solving, analytical, and evaluations skills</li>
+                        <li>•	Basic Web Developing</li>
+                    </ul>
+                </div>
+                <div class="tab-contents" id="education">
+                    <ul>
+                        <li><span>2014-2018</span><br>Biñan Integrated National High School (Junior High)</li>
+                        <li><span>2008-2014</span><br>San Gabriel II Elementary School (GMA, Cavite)</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+    
+</div>
+<div class="copyright">
+    <p>Copyright © Arvee Durante Odon</p>
+</div>
+
+<script>
+    var tablinks = document.getElementsByClassName("tab-links");
+    var tabcontents = document.getElementsByClassName("tab-contents");
+    
+    function opentab(tabname){
+        for(tablink of tablinks){
+            tablink.classList.remove("active-link");
+        }
+        for(tabcontent of tabcontents){
+            tabcontent.classList.remove("active-tab");
+        }
+        event.currentTarget.classList.add("active-link");
+        document.getElementById(tabname).classList.add("active-tab");
+    }
+</script>
+
+<script>
+    var sidemenu = document.getElementById("sidemenu");
+
+    function openmenu(){
+        sidemenu.style.right = "0";
+    }
+    function closemenu(){
+        sidemenu.style.right = "-200px";
+    }
+</script>
+</body>
+</html>

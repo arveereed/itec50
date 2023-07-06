@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Arvee D. Odon</title>
+    <link rel="shortcut icon" type="images" href="images/an.png">
+    <link rel="stylesheet" href="style.css">
+    <script type="text/javascript" src="js/scripts.js"></script>
+    <script src="https://kit.fontawesome.com/741560515d.js" crossorigin="anonymous"></script>
+</head>
+<body onLoad="renderTime();">
+<div id="header">
+    <div class="container">
+        <nav>
+            <img src="images/logo.png" class="logo">
+            <ul id="sidemenu">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="about.html">About</a></li>
+                <li><a href="gallery.html">Gallery</a></li>
+                <li><a href="contact.html">Contact</a></li>
+                <i class="fa-solid fa-circle-xmark" onclick="closemenu()"></i>
+            </ul>
+            <i class="fa-solid fa-bars" onclick="openmenu()"></i>
+        </nav>
+        <div id="clockDisplay"></div>
+        <div class="header-text">
+            <p>Java Dev.</p>
+            <h1>Hi, I'm <span>Arvee </span><br>Durante Odon</h1>
+        </div>        
+    </div>
+</div>
+<div class="copyright">
+    <p>Copyright © Arvee Durante Odon</p>
+</div>
+
+<script>
+    var sidemenu = document.getElementById("sidemenu");
+    function openmenu(){
+        sidemenu.style.right = "0";
+    }
+    function closemenu(){
+        sidemenu.style.right = "-200px";
+    }
+</script>
+</body>
+</html>

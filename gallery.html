@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Arvee D. Odon</title>
+    <link rel="shortcut icon" type="images" href="images/an.png">
+    <link rel="stylesheet" href="css/style.css">
+    <script type="text/javascript" src="js/scripts.js"></script>
+    <script src="https://kit.fontawesome.com/741560515d.js" crossorigin="anonymous"></script>
+</head>
+<body onLoad="renderTime();">
+<div id="header">
+    <div class="container">
+        <nav>
+            <img src="images/logo.png" class="logo">
+            <ul id="sidemenu">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="about.html">About</a></li>
+                <li><a href="gallery.html">Gallery</a></li>
+                <li><a href="contact.html">Contact</a></li>
+                <i class="fa-solid fa-circle-xmark" onclick="closemenu()"></i>
+            </ul>
+            <i class="fa-solid fa-bars" onclick="openmenu()"></i>
+        </nav>
+        <div id="clockDisplay"></div>
+                
+    </div>
+</div>
+<!-----gallery-->
+<div id="gallery">
+    <div class="container">
+        <h1 class="sub-title">Gallery</h1>
+        <div class="work-list">
+            <div class="work">
+                <img src="images/sds.jpg">
+                <div class="layer">
+                    <h2>Seven Deadly Sins</h2><br>
+                    <h4>Genre: Action, Adventure, Fantasy, Shounen, Supernatural</h4><br>
+                    <p>If you seek a positively charged anime with a gripping storyline, exhilarating battles, thrilling adventures, and not to mention, moments that will leave you in stitches, then this anime is precisely what you're looking for. It successfully combines all these elements to create a truly remarkable and enjoyable watch.</p>
+                    <a href="#"><i class="fa-solid fa-fan"></i></a>
+                </div>
+            </div>
+            <div class="work">
+                <img src="images/jotaro.webp">
+                <div class="layer">
+                    <h2>JoJo's Bizarre Adventure</h2><br>
+                    <h4>Genre: Action, Adventure, Shounen, Supernatural</h4><br>
+                    <p>I had never intended to delve into the world of Jojo, but after being exposed to numerous memes and fueled by my own curiosity, I decided to hop on this bandwagon. .Words cannot adequately capture the depth of my adoration for this exceptional masterpiece. From its captivating memes to its impeccably crafted sound effects, every element of this anime resonates with brilliance. I wholeheartedly recommend that you indulge in this anime, its quality surpasses all expectations, making it an extraordinary and incredibly gratifying experience.</p>
+                    <a href="#"><i class="fa-solid fa-fan"></i></a>
+                </div>
+            </div>
+            <div class="work">
+                <img src="images/ds.jpg">
+                <div class="layer">
+                    <h2>Demon Slayer</h2><br>
+                    <h4>Genre: Action, Demons, Historical, Shounen, Supernatural</h4><br>
+                    <p>This anime is poised to secure its spot at the pinnacle of greatness. It is truly a magnificent work of art. Every episode leaves viewers spellbound, as the breathtaking storytelling and captivating visuals come together seamlessly. The anticipation for the next season is palpable, as fans eagerly await its arrival, yearning for more of the enchantment and wonder that this anime has consistently delivered. I highly recommend this anime to both newcomers and seasoned viewers alike. It serves as an excellent introduction to the world of anime.</p>
+                    <a href="#"><i class="fa-solid fa-fan"></i></a>
+                </div>
+            </div>
+            <div class="work">
+                <img src="images/asta.jpg">
+                <div class="layer">
+                    <h2>Black Clover</h2><br>
+                    <h4>Genre: Action, Comedy, Fantasy, Magic, Shounen</h4><br>
+                    <p>Despite coming across numerous negative reviews, my curiosity got the better of me, and I decided to give this anime a chance. To my pleasant surprise, I fell head over heels in love with it. The characters, animation, and story surpassed my expectations, delivering an extraordinary viewing experience. While watching, I couldn't help but notice subtle references to beloved series like Fairy Tail and Naruto, which added an extra layer of enjoyment. However, the anime is amazing.</p>
+                    <a href="#"><i class="fa-solid fa-fan"></i></a>
+                </div>
+            </div>
+        </div>
+       <a href="#" class="btn">See more</a>
+    </div>
+</div>
+
+<div class="copyright">
+    <p>Copyright © Arvee Durante Odon</p>
+</div>
+
+<script>
+    var sidemenu = document.getElementById("sidemenu");
+    function openmenu(){
+        sidemenu.style.right = "0";
+    }
+    function closemenu(){
+        sidemenu.style.right = "-200px";
+    }
+</script>
+
+</body>
+</html>
